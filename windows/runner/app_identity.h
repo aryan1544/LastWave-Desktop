@@ -1,4 +1,4 @@
-﻿#ifndef RUNNER_APP_IDENTITY_H_
+#ifndef RUNNER_APP_IDENTITY_H_
 #define RUNNER_APP_IDENTITY_H_
 
 // Single process identity for the desktop shell: taskbar grouping and the
@@ -11,7 +11,7 @@
 // shortcut with this ID exists (e.g. `flutter run` without installing)
 // - the shell cannot resolve display name/icon and falls back to
 // "Unknown app" with no logo.
-constexpr wchar_t kLastWaveAppUserModelId[] = L"com.lastwave.lastwave_desktop";
+constexpr wchar_t kLastWaveAppUserModelId[] = L"com.orbitaudio.orbit_audio";
 
 #endif  // RUNNER_APP_IDENTITY_H_
 

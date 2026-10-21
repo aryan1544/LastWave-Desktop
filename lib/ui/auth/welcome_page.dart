@@ -15,7 +15,7 @@ import '../theme/wave_icons.dart';
 const _lastFmApiAccountUrl = 'https://www.last.fm/api/account/create';
 
 const _githubUrl =
-    'https://github.com/Clash-Projects/LastWave-Desktop';
+    'https://github.com/aryan1544/LastWave-Desktop';
 
 /// Mandatory Last.fm entry screen.
 ///

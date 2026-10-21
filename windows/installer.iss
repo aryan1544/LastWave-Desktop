@@ -11,16 +11,16 @@
 #ifndef MyAppVersion
   #define MyAppVersion "1.0.0-dev"
 #endif
-#define MyAppName "LastWave Orbit"
-#define MyAppPublisher "Clash-Projects / Orbit custom build"
-#define MyAppURL "https://github.com/Clash-Projects/LastWave-Desktop"
-#define MyAppExeName "lastwave_desktop.exe"
-#define MyAppId "{{E8B4F6A2-7C3D-4A1E-9F5B-2D6A8C4E1A3B5}"
+#define MyAppName "Orbit Audio"
+#define MyAppPublisher "Orbit Audio custom build"
+#define MyAppURL "https://github.com/aryan1544/LastWave-Desktop"
+#define MyAppExeName "orbit_audio.exe"
+#define MyAppId "{{A9C2E100-5F4B-4D7A-9D2C-3A8B70F11C24}"
 ; Must match kLastWaveAppUserModelId in windows/runner/app_identity.h.
 ; The shell resolves the SMTC volume-flyout label/icon via the Start Menu
 ; shortcut's AppUserModelID - without this the flyout shows "Unknown app"
 ; with no logo even though the exe sets the same ID at runtime.
-#define MyAppUserModelId "com.lastwave.lastwave_desktop"
+#define MyAppUserModelId "com.orbitaudio.orbit_audio"
 
 [Setup]
 AppId={#MyAppId}
@@ -31,11 +31,11 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={localappdata}\Programs\LastWave Orbit
+DefaultDirName={localappdata}\Programs\Orbit Audio
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=..\build\windows\installer
-OutputBaseFilename=lastwave-orbit_{#MyAppVersion}_windows-x86_64-setup
+OutputBaseFilename=orbit-audio_{#MyAppVersion}_windows-x86_64-setup
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern

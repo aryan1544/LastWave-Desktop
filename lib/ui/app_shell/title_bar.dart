@@ -3,7 +3,6 @@ import 'dart:io' show Platform;
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../../features/lastfm/auth_repository.dart';
@@ -20,7 +19,6 @@ import '../components/menus.dart'
         WaveMenuSeparator;
 import '../theme/haze.dart';
 import '../theme/tokens.dart';
-import '../theme/brand_icons.dart';
 import '../theme/wave_icons.dart';
 
 /// Compact 44px title / nav / search bar.
@@ -131,7 +129,7 @@ class WaveTitleBar extends ConsumerWidget {
                             ),
                             const SizedBox(width: 7),
                             Text(
-                              'ORBIT',
+                              'ORBIT AUDIO',
                               style: WaveType.overline.copyWith(
                                 color: dark
                                     ? WaveColors.textSecondary
@@ -149,7 +147,6 @@ class WaveTitleBar extends ConsumerWidget {
                   ),
                 ),
                 // Community shortcuts — tiny, before the profile.
-                const _CommunityBtns(),
                 const SizedBox(width: 6),
                 // Profile / account — tiny, no giant buttons.
                 MouseRegion(
@@ -535,44 +532,6 @@ class _AppMenu extends StatelessWidget {
         icon: WaveIcons.more,
         onTap: onOpen,
       ),
-    );
-  }
-}
-
-/// Telegram + Discord shortcuts in the title bar (external links,
-/// silent fail — never disturb the shell on error).
-class _CommunityBtns extends StatelessWidget {
-  const _CommunityBtns();
-
-  static const _telegramUrl = 'https://t.me/clashprojects';
-  static const _discordUrl = 'https://discord.com/invite/TMCEPSUNk2';
-
-  Future<void> _open(String url) async {
-    try {
-      final uri = Uri.parse(url);
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(uri, mode: LaunchMode.externalApplication);
-      }
-    } catch (_) {}
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        _BarBtn(
-          tooltip: 'Telegram community',
-          iconWidget: const TelegramIcon(size: 15),
-          onTap: () => _open(_telegramUrl),
-        ),
-        const SizedBox(width: 2),
-        _BarBtn(
-          tooltip: 'Discord server',
-          iconWidget: const DiscordIcon(size: 15),
-          onTap: () => _open(_discordUrl),
-        ),
-      ],
     );
   }
 }

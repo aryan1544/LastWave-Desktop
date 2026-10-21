@@ -1,78 +1,55 @@
 <div align="center">
 
-<img src="lastwave-logo.png" alt="LastWave Logo" width="120" height="120" style="border-radius: 50%;" />
+<img src="lastwave-logo.png" alt="Orbit Audio Logo" width="120" height="120" />
 
-# LastWave
+# Orbit Audio
 
-**Next-Gen Lossless Music player with Algorithmic Smart Playlist Generator, Real-Time Synced Lyrics & Last.fm Scrobbler for Desktop.**
+**A desktop music player with lossless-first playback, synced lyrics, discovery, WASAPI exclusive output, a 10-band equalizer, and a dedicated IEM Clarity preset.**
 
-<p align="center">
-  <a href="https://github.com/Clash-Projects/LastWave-Desktop/stargazers">
-    <img src="https://img.shields.io/github/stars/Clash-Projects/LastWave-Desktop?style=for-the-badge&color=ffd0b0&labelColor=2d2d2d" alt="Stars" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Client-Lossless%20Music-FF0000?style=for-the-badge&logo=lossless&logoColor=white&labelColor=2d2d2d" alt="Lossless Music Client" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Scrobbler-Last.fm-D51007?style=for-the-badge&logo=lastdotfm&logoColor=white&labelColor=2d2d2d" alt="Last.fm Scrobbler" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Platform-Desktop-3DDC84?style=for-the-badge&logo=windows&logoColor=white&labelColor=2d2d2d" alt="Platform" />
-  </a>
-</p>
+[Windows downloads](https://github.com/aryan1544/LastWave-Desktop/actions) · [Source code](https://github.com/aryan1544/LastWave-Desktop)
 
 </div>
 
-<br/>
+---
 
-<div align="center">
-<img src="screenshots/homepage.png" alt="LastWave Homepage Screenshot" width="80%" style="border-radius: 14px; margin: 4px;"/>
-<img src="screenshots/player.png" alt="LastWave Lyrics Screenshot" width="80%" style="border-radius: 14px; margin: 4px;" />
-</div>
+## About
 
-<div>
-  <h2>Overview</h2>
-  <p>LastWave is a next-gen lossless music player for desktop that comes with an algorithmic smart playlist generator, real-time synced lyrics, and Last.fm scrobbler. It is designed to provide a seamless music listening experience with high-quality audio playback and intelligent playlist management.</p>
-</div>
+Orbit Audio is a personal rebrand of LastWave Desktop for desktop listening. It aims to keep the original player's music, discovery, queue, lyrics, library, and audio features while giving the desktop interface its own name, visual identity, and headphone-focused tuning options.
 
-<div>
-  <h2>Features</h2>
-  <ul>
-    <li>Lossless music playback for high-quality audio experience.</li>
-    <li>Algorithmic smart playlist generator that creates playlists based on your listening habits.</li>
-    <li>Real-time synced lyrics display for an immersive music experience.</li>
-    <li>Last.fm scrobbler integration to track your listening history and discover new music.</li>
-    <li>YouTube Music integration for streaming and managing your favorite tracks.</li>
-  </ul>
-</div>
+## Highlights
 
-<!-- Getting Started
-Download the latest APK from the Releases or Actions tab.
-Install LastWave-v4.2.2-release.apk on your Android device (Android 7.0+).
-Connect your Last.fm account in Settings → Integrations to unlock the scrobbler, taste mixes, and personalized discovery radar.
-Enjoy ad-free streaming and smart playlist generation! -->
+- **Orbit interface:** deep aubergine surfaces, warm text, and lime accent highlights.
+- **Music discovery:** personalized recommendations and quick-pick shelves when the feed is available.
+- **Listening controls:** queue, previous/next, shuffle, repeat, and playback controls.
+- **Lyrics and library:** retains the underlying LastWave Desktop features available in the current build.
+- **Audio settings:** lossless-first source selection, Windows WASAPI output options, and a 10-band equalizer where supported.
+- **IEM Clarity preset:** a gentle starting curve intended to add a little presence/detail while reducing some low-mid congestion. It is not a measurement-based calibration for every earphone; results vary by IEM, fit, source, and personal taste.
 
-<div>
-  <h2>Installation</h2>
-  <p>To install LastWave on your desktop, follow these steps:</p>
-  <ol>
-    <li>Download the latest version of LastWave from the <a href="https://github.com/Clash-Projects/LastWave-Desktop/releases">Releases</a> tab.</li>
-    <li>Run the installer and follow the on-screen instructions.</li>
-  </ol>
-</div>
+## Download for Windows
 
+Download the latest version of Orbit Audio from the [GitHub Actions builds page](https://github.com/aryan1544/LastWave-Desktop/actions): choose the latest successful **Build Orbit Audio for Windows** run, then download the `Orbit-Audio-Windows-Setup` artifact. Extract the downloaded ZIP and run the included installer.
 
-## <img src="https://api.iconify.design/lucide:shield-alert.svg?color=%23FFB4A2" width="20" height="20" align="center" /> Disclaimer
+A successful build is required before a setup file will appear. The app does not automatically become a Google Play listing or appear instantly in Google Search; public distribution and search indexing are separate steps.
 
-> [!NOTE]
-> **Educational & Research Notice**
->
-> LastWave is an open-source, non-commercial application developed strictly for research and educational purposes.
->
-> **No Affiliation & Content Policy**
-> - LastWave is an independent project and is **not affiliated with, endorsed, or sponsored by Google LLC, YouTube, YouTube Music, Spotify, Apple Inc., Last.fm, or any music service**.
-> - LastWave **does not host, stream from private servers, or distribute any copyrighted media**. All content and metadata are accessed directly from public endpoints in accordance with their respective terms. All trademarks belong to their respective owners.
+## Set up IEM sound
 
-<div align="center">
-  <p>Built with ❤️ by <a href="https://github.com/mrinmoyhaloi">Mrinmoy</a>, <a href="https://github.com/SYR3X">Kehan</a> & <a href="https://github.com/ajisth69">Ajisth</a>.</p>
-</div>
+After installing a build that includes the IEM preset:
+
+1. Open **Settings → Audio → IEM & Headphone Sound**.
+2. Enable the equalizer if needed.
+3. Choose **IEM Clarity** under Equalizer preset.
+4. Start with a comfortable volume and adjust or disable the preset if it does not suit your IEM.
+
+For the cleanest result, use a high-quality source when available and avoid excessive volume or heavy boosts. Lossless/high-resolution playback can preserve only the quality of the source actually received; it cannot recover detail absent from a lossy or low-quality source. WASAPI exclusive/bit-perfect options depend on the Windows output device, driver, and chosen format, and may bypass system mixing or other audio processing.
+
+## Project and attribution
+
+Orbit Audio is a personal custom build based on **LastWave Desktop**. It is not an official release from the upstream project and is not affiliated with the original maintainers. Original application code and third-party components remain subject to their respective licenses. See the repository's `LICENSE` files and notices for applicable terms.
+
+## Build information
+
+The Windows installer is built by GitHub Actions on a Windows runner; the developer workstation does not need to compile the native Windows target locally. Build artifacts are available for a limited time on the corresponding Actions run.
+
+## About this build
+
+Orbit Audio is a personal custom build based on LastWave Desktop for personal desktop listening. Branding and UI changes do not imply a separate streaming service, a Google Play listing, or different rights to the underlying music catalogs.

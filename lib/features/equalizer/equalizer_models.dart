@@ -48,6 +48,12 @@ class EqualizerPresets {
     [2.7, 2.2, 0.6, -2.6, -0.6, 1.2, 3.0, 4.0, 4.3, 4.8],
   );
 
+  /// Mild upper-mid detail and a small low-mid reduction for IEM listening.
+  /// This is a starting point, not a model-specific calibration.
+  static const iemClarity = EqPreset(
+    'IEM Clarity',
+    [-0.5, -0.3, -0.6, -1.2, -0.4, 0.2, 0.8, 1.0, 0.6, 0.2],
+  );
   static const vocalClarity = EqPreset(
     'Vocal Clarity',
     [-1.2, -0.5, 0.0, 1.0, 2.5, 3.5, 2.8, 2.0, 1.5, 1.0],
@@ -101,6 +107,7 @@ class EqualizerPresets {
   static const List<EqPreset> all = [
     flat,
     studioMaster,
+    iemClarity,
     vocalClarity,
     deepBassClean,
     rock,

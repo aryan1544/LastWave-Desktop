@@ -1,4 +1,4 @@
-name: Build LastWave Orbit for Windows
+name: Build Orbit Audio for Windows
 
 on:
   push:
@@ -50,22 +50,22 @@ jobs:
           $version = $versionMatch.Matches[0].Groups[1].Value
           & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' "/DMyAppVersion=$version" windows\installer.iss
           if ($LASTEXITCODE -ne 0) { throw 'Inno Setup failed.' }
-          $installer = Get-ChildItem 'build\windows\installer\lastwave-orbit_*_windows-x86_64-setup.exe' | Select-Object -First 1
+          $installer = Get-ChildItem 'build\windows\installer\orbit-audio_*_windows-x86_64-setup.exe' | Select-Object -First 1
           if (-not $installer) { throw 'Orbit installer was not produced.' }
           Write-Host "Created $($installer.FullName)"
 
       - name: Upload Orbit setup EXE
         uses: actions/upload-artifact@v4
         with:
-          name: LastWave-Orbit-Windows-Setup
-          path: build\windows\installer\lastwave-orbit_*_windows-x86_64-setup.exe
+          name: Orbit-Audio-Windows-Setup
+          path: build\windows\installer\orbit-audio_*_windows-x86_64-setup.exe
           if-no-files-found: error
           retention-days: 14
 
       - name: Upload portable Windows application
         uses: actions/upload-artifact@v4
         with:
-          name: LastWave-Orbit-Windows-Portable
+          name: Orbit-Audio-Windows-Portable
           path: build\windows\x64\runner\Release\
           if-no-files-found: error
           retention-days: 14

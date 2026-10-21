@@ -320,7 +320,7 @@ class _OrbitHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'LASTWAVE  /  ORBIT',
+                'ORBIT AUDIO  /  HI-RES',
                 style: TextStyle(
                   color: palette.accent,
                   fontSize: 10,

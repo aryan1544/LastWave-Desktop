@@ -32,7 +32,6 @@ import '../../features/audio_output/output_controller.dart';
 import '../../features/audio_output/output_path_sheet.dart';
 import '../../features/lyrics/lyrics_providers.dart';
 import '../theme/tokens.dart';
-import '../theme/brand_icons.dart';
 import '../../features/equalizer/equalizer_controller.dart';
 import '../../features/equalizer/equalizer_models.dart';
 import '../../features/presence/discord_presence_service.dart';
@@ -280,7 +279,7 @@ class _AccentPreview extends StatelessWidget {
         '#${argb.toRadixString(16).padLeft(8, '0').substring(2).toUpperCase()}';
     final text = switch (resolution.source) {
       AccentSource.custom => 'Custom colour · $hex',
-      AccentSource.lastwave => 'LastWave neutral · $hex',
+      AccentSource.lastwave => 'Orbit Audio default · $hex',
       AccentSource.system => resolution.resolved
           ? 'Desktop accent · $hex'
           : 'This desktop exposes no accent — using custom colour',
@@ -603,8 +602,8 @@ class _Audio extends ConsumerWidget {
         ),
         const SizedBox(height: 8),
         _Group(
-          title: 'Equalizer & Studio Master Clarity',
-          subtitle: '10-band ISO curves with acoustic & stage compensation',
+          title: 'IEM & Headphone Sound',
+          subtitle: 'Lossless playback, WASAPI exclusive, and the gentle IEM Clarity profile',
           child: const _EqualizerSettingsSummary(),
         ),
       ],
@@ -2470,7 +2469,7 @@ class _About extends StatelessWidget {
             children: [
               WaveButton(
                 onPressed: () =>
-                    _open('https://github.com/Clash-Projects/LastWave-Desktop'),
+                    _open('https://github.com/aryan1544/LastWave-Desktop'),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -2482,7 +2481,7 @@ class _About extends StatelessWidget {
               ),
               WaveButton(
                 onPressed: () => _open(
-                  'https://github.com/Clash-Projects/LastWave-Desktop/issues',
+                  'https://github.com/aryan1544/LastWave-Desktop/issues',
                 ),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
@@ -2495,7 +2494,7 @@ class _About extends StatelessWidget {
               ),
               WaveButton(
                 onPressed: () =>
-                    _open('https://github.com/Clash-Projects/LastWave-Desktop'),
+                    _open('https://github.com/aryan1544/LastWave-Desktop'),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -2505,32 +2504,7 @@ class _About extends StatelessWidget {
                   ],
                 ),
               ),
-              WaveButton(
-                onPressed: () =>
-                    _open('https://t.me/clashprojects'),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    TelegramIcon(size: 14),
-                    SizedBox(width: 6),
-                    Text('Telegram community'),
-                  ],
-                ),
-              ),
-              WaveButton(
-                onPressed: () => _open(
-                  'https://discord.com/invite/TMCEPSUNk2',
-                ),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    DiscordIcon(size: 14),
-                    SizedBox(width: 6),
-                    Text('Discord server'),
-                  ],
-                ),
-              ),
-            ],
+],
           ),
         ],
       ),
