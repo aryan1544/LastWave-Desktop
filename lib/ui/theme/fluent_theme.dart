@@ -4,10 +4,10 @@ import 'tokens.dart';
 
 /// Single Fluent component system factory.
 ///
-/// - Dark: charcoal smoked surfaces over native Mica (set in app/window.dart).
-/// - Light: pearl surfaces.
-/// - Accent: user accent from prefs, defaulting to neutral off-white
-///   ([WaveColors.defaultAccent]). No blue accent defaults anywhere.
+/// - Dark: Orbit's aubergine smoked surfaces over native Mica.
+/// - Light: lavender-white surfaces with plum typography.
+/// - Accent: the saved user accent, defaulting to Orbit lime
+///   ([WaveColors.defaultAccent]).
 /// - Component radii follow [WaveRadius]: menus/popovers 7px, dialogs 10px
 ///   max, buttons/controls 5px. No pill buttons — pill shapes are reserved
 ///   for meta chips and the circular transport button.

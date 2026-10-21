@@ -1,4 +1,4 @@
-﻿; LastWave - Windows installer (Inno Setup 6).
+; LastWave - Windows installer (Inno Setup 6).
 ;
 ; Built ONLY for releases (v* tags); see .github/workflows/desktop.yml.
 ; Version is injected by CI: ISCC /DMyAppVersion=1.0.0
@@ -11,8 +11,8 @@
 #ifndef MyAppVersion
   #define MyAppVersion "1.0.0-dev"
 #endif
-#define MyAppName "LastWave"
-#define MyAppPublisher "Clash-Projects"
+#define MyAppName "LastWave Orbit"
+#define MyAppPublisher "Clash-Projects / Orbit custom build"
 #define MyAppURL "https://github.com/Clash-Projects/LastWave-Desktop"
 #define MyAppExeName "lastwave_desktop.exe"
 #define MyAppId "{{E8B4F6A2-7C3D-4A1E-9F5B-2D6A8C4E1A3B5}"
@@ -31,11 +31,11 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={localappdata}\Programs\LastWave
+DefaultDirName={localappdata}\Programs\LastWave Orbit
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=..\build\windows\installer
-OutputBaseFilename=lastwave_{#MyAppVersion}_windows-x86_64-setup
+OutputBaseFilename=lastwave-orbit_{#MyAppVersion}_windows-x86_64-setup
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern

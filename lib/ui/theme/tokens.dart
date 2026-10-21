@@ -9,65 +9,62 @@ import 'package:fluent_ui/fluent_ui.dart';
 /// `features/lyrics/lyrics_view.dart` that was their only importer):
 /// do not recreate it, and do not copy values out of it.
 ///
-/// Wave direction:
-/// - Neutral graphite base (#0E0E0E / #161616 / #1E1E1E), off-white text.
-/// - NO blue/navy theme, NO giant pills (pill shapes are allowed ONLY for
-///   [WaveChip]-style chips and circular transport buttons). Radii come
-///   from the [WaveRadius] ladder — never a loose numeric literal.
-/// - The base stays neutral; artwork drives personality. The off-white
-///   accent is used sparingly (play affordance, progress fill, selection),
-///   never as large tinted surfaces.
+/// Orbit direction:
+/// - Deep aubergine surfaces, warm-white text, and a vivid lime accent.
+/// - Artwork and typography carry personality while shared controls stay clear.
+/// - The shared palette keeps navigation, library, lyrics, player and settings
+///   visually consistent as one redesigned desktop listening experience.
 class WaveColors {
   WaveColors._();
 
   // Neutral base — true graphite, zero blue.
-  static const background = Color(0xFF0E0E0E);
-  static const backgroundDeep = Color(0xFF0A0A0A);
-  static const surface = Color(0xFF161616);
-  static const surfaceRaised = Color(0xFF1E1E1E);
-  static const surfaceOverlay = Color(0xFF262626);
+  static const background = Color(0xFF121016);
+  static const backgroundDeep = Color(0xFF0B0910);
+  static const surface = Color(0xFF1B1821);
+  static const surfaceRaised = Color(0xFF25212D);
+  static const surfaceOverlay = Color(0xFF302A39);
 
   // Translucent shells painted over Mica.
-  static const panelTranslucent = Color(0xE6161616);
-  static const dockTranslucent = Color(0xF2141414);
-  static const railTranslucent = Color(0xE60E0E0E);
+  static const panelTranslucent = Color(0xE61B1821);
+  static const dockTranslucent = Color(0xF216141C);
+  static const railTranslucent = Color(0xE6121016);
 
-  static const outline = Color(0xFF2B2B2B);
-  static const outlineSoft = Color(0xFF1F1F1F);
+  static const outline = Color(0xFF393142);
+  static const outlineSoft = Color(0xFF2A2532);
 
-  static const textPrimary = Color(0xFFF5F4F0);
-  static const textSecondary = Color(0xFFA8A6A0);
+  static const textPrimary = Color(0xFFF6F1FC);
+  static const textSecondary = Color(0xFFADA5BB);
 
   /// Meta tier (timestamps, captions, column sub-headers).
   ///
   /// Sits at 4.7:1 on the raised surface — it used to be `#6E6C66` (3.2:1
   /// raised, 2.9:1 overlay), which is squinty for 11–12px text. Still
   /// clearly quieter than [textSecondary].
-  static const textTertiary = Color(0xFF8A8880);
+  static const textTertiary = Color(0xFF92869F);
 
   // Neutral accent — off-white. Play / progress / selected use this
   // by default; artwork tint may override sparingly at runtime.
-  static const defaultAccent = Color(0xFFF5F4F0);
+  static const defaultAccent = Color(0xFFD9FF66);
   static const success = Color(0xFF7BE3A8);
-  static const warn = Color(0xFFE0A030);
-  static const danger = Color(0xFFE0506A);
+  static const warn = Color(0xFFF3BE63);
+  static const danger = Color(0xFFFF718A);
 
   // Light — Windows 11 neutral, NOT beige.
   // Base app: #F3F3F3 Mica-like · nav: #ECECEC tinted · content: #F9F9F9
   // clean · player: #FFFFFF elevated · flyouts: white acrylic.
-  static const lightBackground = Color(0xFFF3F3F3);
-  static const lightNavBackground = Color(0xFFECECEC);
-  static const lightContent = Color(0xFFF9F9F9);
+  static const lightBackground = Color(0xFFF6F3FA);
+  static const lightNavBackground = Color(0xFFEEE9F4);
+  static const lightContent = Color(0xFFFBF9FF);
   static const lightSurface = Color(0xFFFFFFFF);
   static const lightSurfaceRaised = Color(0xFFFFFFFF);
-  static const lightOverlay = Color(0xFFEDEBE9);
-  static const lightOutline = Color(0xFFE1DFDD);
-  static const lightOutlineSoft = Color(0xFFEDEBE9);
-  static const lightTextPrimary = Color(0xFF1B1A19);
-  static const lightTextSecondary = Color(0xFF605E5C);
+  static const lightOverlay = Color(0xFFF0ECF5);
+  static const lightOutline = Color(0xFFE1DBEA);
+  static const lightOutlineSoft = Color(0xFFEEE9F4);
+  static const lightTextPrimary = Color(0xFF211C2B);
+  static const lightTextSecondary = Color(0xFF6D657A);
 
   /// Meta tier — 4.8:1 on white (was `#8A8886`, 3.5:1). See [textTertiary].
-  static const lightTextTertiary = Color(0xFF74726F);
+  static const lightTextTertiary = Color(0xFF7A7089);
 
   // AMOLED — pure-black Midnight variant (user pref `lw_amoled`). Only
   // the base/shell surfaces collapse to black; text, outline and accent

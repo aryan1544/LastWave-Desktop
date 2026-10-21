@@ -179,7 +179,7 @@ class Prefs {
   String get accentMode => _sp.getString('lw_accent_mode') ?? 'manual';
   Future<void> setAccentMode(String v) => _sp.setString('lw_accent_mode', v);
 
-  int get accentColor => _sp.getInt('lw_accent') ?? 0xFFE03030;
+  int get accentColor => _sp.getInt('lw_accent') ?? 0xFFD9FF66;
   Future<void> setAccentColor(int v) => _sp.setInt('lw_accent', v);
 
   bool get dynamicNowPlaying => _sp.getBool('lw_dynamic_now_playing') ?? false;

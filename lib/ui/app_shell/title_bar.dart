@@ -121,9 +121,29 @@ class WaveTitleBar extends ConsumerWidget {
                           }
                         } catch (_) {}
                       },
-                      child: const SizedBox(
-                        width: double.infinity,
-                        height: double.infinity,
+                      child: Row(
+                        children: [
+                          if (!compact) ...[
+                            const Icon(
+                              WaveIcons.musicCollection,
+                              size: 14,
+                              color: WaveColors.defaultAccent,
+                            ),
+                            const SizedBox(width: 7),
+                            Text(
+                              'ORBIT',
+                              style: WaveType.overline.copyWith(
+                                color: dark
+                                    ? WaveColors.textSecondary
+                                    : WaveColors.lightTextSecondary,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                          ],
+                          const Expanded(
+                            child: SizedBox(height: double.infinity),
+                          ),
+                        ],
                       ),
                     ),
                   ),

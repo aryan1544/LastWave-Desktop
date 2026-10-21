@@ -27,7 +27,7 @@ Future<void> setupWindow() async {
       size: Size(1360, 860),
       minimumSize: Size(1024, 640),
       center: true,
-      title: 'LastWave',
+      title: 'LastWave Orbit',
       titleBarStyle: TitleBarStyle.hidden,
       // Neutral graphite — the Wave token, so first frame never flashes
       // a different base in either theme.
@@ -85,10 +85,10 @@ Future<void> _setupTray() async {
 
     await trayManager.setIcon(iconPath);
     if (!Platform.isLinux) {
-      await trayManager.setToolTip('LastWave');
+      await trayManager.setToolTip('LastWave Orbit');
     }
     await trayManager.setContextMenu(Menu(items: [
-      MenuItem(key: 'show', label: 'Show LastWave'),
+      MenuItem(key: 'show', label: 'Show LastWave Orbit'),
       MenuItem.separator(),
       MenuItem(key: 'toggle', label: 'Play / Pause  (Ctrl+Alt+P)'),
       MenuItem(key: 'next', label: 'Next  (Ctrl+Alt+N)'),

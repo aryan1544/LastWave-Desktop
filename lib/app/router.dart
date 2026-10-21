@@ -18,7 +18,7 @@ import '../ui/collections/playlists_page.dart';
 import '../ui/collections/yt_playlist_detail_page.dart';
 import '../ui/collections/yt_shelf_page.dart';
 import '../ui/discover/discover_page.dart';
-import '../ui/home/home_page.dart';
+import '../ui/home/orbit_home_page.dart';
 import '../ui/lyrics/lyrics_screen.dart';
 import '../ui/misc/support_pages.dart';
 import '../ui/navigation/flight.dart';
@@ -140,7 +140,7 @@ GoRouter buildRouter({required AuthGate gate}) {
               GoRoute(
                 path: '/home',
                 pageBuilder: (c, s) =>
-                    _page(const WaveHomePage()),
+                    _page(const OrbitHomePage()),
               ),
             ],
           ),

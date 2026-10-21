@@ -1,0 +1,71 @@
+name: Build LastWave Orbit for Windows
+
+on:
+  push:
+    branches: [orbit-ui]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-orbit-windows:
+    name: Build Orbit Windows installer
+    runs-on: windows-latest
+    steps:
+      - name: Checkout customized source
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Prepare build-time environment
+        shell: pwsh
+        env:
+          ADDON_CLIENT_SECRET: ${{ secrets.ADDON_CLIENT_SECRET }}
+        run: |
+          "ADDON_CLIENT_SECRET=$env:ADDON_CLIENT_SECRET" | Set-Content -Path .env -Encoding ascii
+
+      - name: Generate obfuscated build constants
+        run: dart tool/obfuscate_secrets.dart
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze source (diagnostic only)
+        continue-on-error: true
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Build Windows application
+        run: flutter build windows --release
+
+      - name: Build Orbit setup EXE
+        shell: pwsh
+        run: |
+          choco install innosetup --no-progress -y
+          $versionMatch = Select-String -Path pubspec.yaml -Pattern '^version:\s*(\d+\.\d+\.\d+)'
+          $version = $versionMatch.Matches[0].Groups[1].Value
+          & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' "/DMyAppVersion=$version" windows\installer.iss
+          if ($LASTEXITCODE -ne 0) { throw 'Inno Setup failed.' }
+          $installer = Get-ChildItem 'build\windows\installer\lastwave-orbit_*_windows-x86_64-setup.exe' | Select-Object -First 1
+          if (-not $installer) { throw 'Orbit installer was not produced.' }
+          Write-Host "Created $($installer.FullName)"
+
+      - name: Upload Orbit setup EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: LastWave-Orbit-Windows-Setup
+          path: build\windows\installer\lastwave-orbit_*_windows-x86_64-setup.exe
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload portable Windows application
+        uses: actions/upload-artifact@v4
+        with:
+          name: LastWave-Orbit-Windows-Portable
+          path: build\windows\x64\runner\Release\
+          if-no-files-found: error
+          retention-days: 14
