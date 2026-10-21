@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fluent_ui/fluent_ui.dart';
+import 'package:fluent_ui/fluent_ui.dart' hide RepeatMode;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -54,7 +54,7 @@ class OrbitHomePage extends ConsumerWidget {
       color: palette.canvas,
       child: feedAsync.when(
         loading: () => _OrbitLoading(palette: palette),
-        error: (_, __) => _OrbitError(
+        error: (_, _) => _OrbitError(
           palette: palette,
           onRetry: () => ref.invalidate(feedProvider),
         ),
@@ -551,7 +551,7 @@ class _TrackShelf extends StatelessWidget {
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: tracks.take(8).length,
-              separatorBuilder: (_, __) => const SizedBox(width: 12),
+              separatorBuilder: (_, _) => const SizedBox(width: 12),
               itemBuilder: (context, index) {
                 final track = tracks[index];
                 return _TrackCard(
@@ -1096,7 +1096,7 @@ class _OrbitArtwork extends StatelessWidget {
             : Image.network(
                 url,
                 fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => _ArtworkFallback(palette: palette),
+                errorBuilder: (_, _, _) => _ArtworkFallback(palette: palette),
               ),
       ),
     );
