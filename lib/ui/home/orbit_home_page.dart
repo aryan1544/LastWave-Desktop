@@ -700,7 +700,6 @@ class _TrackRow extends StatelessWidget {
     required this.palette,
     required this.track,
     required this.index,
-    required this.total,
     required this.onTap,
   });
 
