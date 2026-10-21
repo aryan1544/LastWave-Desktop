@@ -201,10 +201,10 @@ class _RailItemState extends State<_RailItem> {
   Widget build(BuildContext context) {
     final dark = waveIsDark(context);
     final accent = waveAccent(context);
-    final bg = widget.selected
-        ? (dark ? Colors.white : Colors.black).withValues(alpha: 0.08)
+        final bg = widget.selected
+        ? accent.withValues(alpha: dark ? 0.18 : 0.14)
         : _hover
-            ? (dark ? Colors.white : Colors.black).withValues(alpha: 0.04)
+            ? accent.withValues(alpha: dark ? 0.10 : 0.07)
             : Colors.transparent;
     final fg = widget.selected
         ? (dark ? WaveColors.textPrimary : WaveColors.lightTextPrimary)

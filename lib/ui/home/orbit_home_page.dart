@@ -1313,20 +1313,20 @@ class _OrbitPalette {
   const _OrbitPalette(this.dark);
   final bool dark;
 
-  static const lime = Color(0xFFD9FF66);
-  static const violet = Color(0xFFA78BFA);
+  static const lime = Color(0xFF55F2D2);
+  static const violet = Color(0xFF8A8BFF);
   static const coral = Color(0xFFFF987D);
 
-  Color get canvas => dark ? const Color(0xFF121016) : const Color(0xFFF6F3FA);
-  Color get panel => dark ? const Color(0xFF1B1821) : const Color(0xFFFFFFFF);
-  Color get panelRaised => dark ? const Color(0xFF25212D) : const Color(0xFFF0ECF5);
-  Color get outline => dark ? const Color(0xFF302B39) : const Color(0xFFE1DBEA);
-  Color get text => dark ? const Color(0xFFF6F1FC) : const Color(0xFF211C2B);
-  Color get muted => dark ? const Color(0xFFADA5BB) : const Color(0xFF6D657A);
-  Color get faint => dark ? const Color(0xFF82798F) : const Color(0xFF8B8299);
+  Color get canvas => dark ? const Color(0xFF090D18) : const Color(0xFFF2F8FC);
+  Color get panel => dark ? const Color(0xFF10192A) : const Color(0xFFFFFFFF);
+  Color get panelRaised => dark ? const Color(0xFF19263B) : const Color(0xFFE9F2F8);
+  Color get outline => dark ? const Color(0xFF304861) : const Color(0xFFCDDEE9);
+  Color get text => dark ? const Color(0xFFF3FAFF) : const Color(0xFF102033);
+  Color get muted => dark ? const Color(0xFFA7BACC) : const Color(0xFF425A70);
+  Color get faint => dark ? const Color(0xFF829AB0) : const Color(0xFF536B81);
   Color get accent => dark ? lime : const Color(0xFF506600);
-  Color get accentInk => dark ? const Color(0xFF171A10) : Colors.white;
-  Color get progressTrack => dark ? const Color(0xFF393240) : const Color(0xFFE1DBE8);
-  Color get tagBackground => dark ? const Color(0xFF25212D) : const Color(0xFFF7F4FA);
-  Color get skeleton => dark ? const Color(0xFF24202B) : const Color(0xFFE9E3F0);
+  Color get accentInk => dark ? const Color(0xFF07151C) : Colors.white;
+  Color get progressTrack => dark ? const Color(0xFF304861) : const Color(0xFFCDDEE9);
+  Color get tagBackground => dark ? const Color(0xFF19263B) : const Color(0xFFE9F2F8);
+  Color get skeleton => dark ? const Color(0xFF17253A) : const Color(0xFFE0ECF5);
 }

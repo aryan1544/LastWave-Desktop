@@ -18,53 +18,53 @@ class WaveColors {
   WaveColors._();
 
   // Neutral base — true graphite, zero blue.
-  static const background = Color(0xFF121016);
-  static const backgroundDeep = Color(0xFF0B0910);
-  static const surface = Color(0xFF1B1821);
-  static const surfaceRaised = Color(0xFF25212D);
-  static const surfaceOverlay = Color(0xFF302A39);
+  static const background = Color(0xFF090D18);
+  static const backgroundDeep = Color(0xFF050811);
+  static const surface = Color(0xFF10192A);
+  static const surfaceRaised = Color(0xFF19263B);
+  static const surfaceOverlay = Color(0xFF24364F);
 
   // Translucent shells painted over Mica.
-  static const panelTranslucent = Color(0xE61B1821);
-  static const dockTranslucent = Color(0xF216141C);
-  static const railTranslucent = Color(0xE6121016);
+  static const panelTranslucent = Color(0xE610192A);
+  static const dockTranslucent = Color(0xF20A1220);
+  static const railTranslucent = Color(0xE6090D18);
 
-  static const outline = Color(0xFF393142);
-  static const outlineSoft = Color(0xFF2A2532);
+  static const outline = Color(0xFF304861);
+  static const outlineSoft = Color(0xFF22344A);
 
-  static const textPrimary = Color(0xFFF6F1FC);
-  static const textSecondary = Color(0xFFADA5BB);
+  static const textPrimary = Color(0xFFF3FAFF);
+  static const textSecondary = Color(0xFFA7BACC);
 
   /// Meta tier (timestamps, captions, column sub-headers).
   ///
   /// Sits at 4.7:1 on the raised surface — it used to be `#6E6C66` (3.2:1
   /// raised, 2.9:1 overlay), which is squinty for 11–12px text. Still
   /// clearly quieter than [textSecondary].
-  static const textTertiary = Color(0xFF92869F);
+  static const textTertiary = Color(0xFF829AB0);
 
   // Neutral accent — off-white. Play / progress / selected use this
   // by default; artwork tint may override sparingly at runtime.
-  static const defaultAccent = Color(0xFFD9FF66);
-  static const success = Color(0xFF7BE3A8);
+  static const defaultAccent = Color(0xFF55F2D2);
+  static const success = Color(0xFF55E4B2);
   static const warn = Color(0xFFF3BE63);
   static const danger = Color(0xFFFF718A);
 
   // Light — Windows 11 neutral, NOT beige.
   // Base app: #F3F3F3 Mica-like · nav: #ECECEC tinted · content: #F9F9F9
   // clean · player: #FFFFFF elevated · flyouts: white acrylic.
-  static const lightBackground = Color(0xFFF6F3FA);
-  static const lightNavBackground = Color(0xFFEEE9F4);
-  static const lightContent = Color(0xFFFBF9FF);
+  static const lightBackground = Color(0xFFF2F8FC);
+  static const lightNavBackground = Color(0xFFE5EFF7);
+  static const lightContent = Color(0xFFF9FCFF);
   static const lightSurface = Color(0xFFFFFFFF);
   static const lightSurfaceRaised = Color(0xFFFFFFFF);
-  static const lightOverlay = Color(0xFFF0ECF5);
-  static const lightOutline = Color(0xFFE1DBEA);
-  static const lightOutlineSoft = Color(0xFFEEE9F4);
-  static const lightTextPrimary = Color(0xFF211C2B);
-  static const lightTextSecondary = Color(0xFF6D657A);
+  static const lightOverlay = Color(0xFFE9F2F8);
+  static const lightOutline = Color(0xFFCDDEE9);
+  static const lightOutlineSoft = Color(0xFFDCE8F1);
+  static const lightTextPrimary = Color(0xFF102033);
+  static const lightTextSecondary = Color(0xFF425A70);
 
   /// Meta tier — 4.8:1 on white (was `#8A8886`, 3.5:1). See [textTertiary].
-  static const lightTextTertiary = Color(0xFF7A7089);
+  static const lightTextTertiary = Color(0xFF536B81);
 
   // AMOLED — pure-black Midnight variant (user pref `lw_amoled`). Only
   // the base/shell surfaces collapse to black; text, outline and accent
@@ -207,12 +207,12 @@ class WaveSpacing {
 /// artwork radius, so covers and their hover scrims never mismatch.
 class WaveRadius {
   WaveRadius._();
-  static const double tiny = 6;
-  static const double controls = 10;
-  static const double artwork = 12;
-  static const double menu = 14;
-  static const double floating = 20;
-  static const double hero = 24;
+  static const double tiny = 7;
+  static const double controls = 12;
+  static const double artwork = 14;
+  static const double menu = 16;
+  static const double floating = 24;
+  static const double hero = 30;
   static const double structural = 0;
 
   static BorderRadius get tinyRadius =>
@@ -230,17 +230,17 @@ class WaveRadius {
 /// Compact density — real desktop music player zones.
 class WaveDensity {
   WaveDensity._();
-  static const double railCollapsed = 60;
-  static const double railExpanded = 200;
-  static const double titleBar = 44;
-  static const double dock = 80;
-  static const double trackRow = 54;
-  static const double trackArt = 40;
-  static const double contextPanel = 360;
-  static const double contextPanelWide = 380;
-  static const double contentMax = 1280;
-  static const double lyricMax = 620;
-  static const double hitArea = 36;
+  static const double railCollapsed = 72;
+  static const double railExpanded = 224;
+  static const double titleBar = 48;
+  static const double dock = 92;
+  static const double trackRow = 60;
+  static const double trackArt = 44;
+  static const double contextPanel = 384;
+  static const double contextPanelWide = 420;
+  static const double contentMax = 1360;
+  static const double lyricMax = 680;
+  static const double hitArea = 40;
   static const double iconPrimary = 18;
   static const double iconSecondary = 15;
 }
@@ -254,24 +254,24 @@ class WaveDensity {
 class WaveType {
   WaveType._();
   static const pageTitle = TextStyle(
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: FontWeight.w700,
     letterSpacing: -0.4,
     height: 1.15,
   );
   static const sectionTitle = TextStyle(
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: FontWeight.w700,
     letterSpacing: -0.2,
     height: 1.25,
   );
   static const trackTitle = TextStyle(
-    fontSize: 13.5,
+    fontSize: 14,
     fontWeight: FontWeight.w600,
     height: 1.3,
   );
-  static const body = TextStyle(fontSize: 13, height: 1.5);
-  static const meta = TextStyle(fontSize: 12, height: 1.45);
+  static const body = TextStyle(fontSize: 14, height: 1.55);
+  static const meta = TextStyle(fontSize: 12.5, height: 1.45);
   static const label = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w600,
@@ -292,13 +292,13 @@ class WaveType {
     fontFeatures: [FontFeature.tabularFigures()],
   );
   static const lyricActive = TextStyle(
-    fontSize: 21,
+    fontSize: 24,
     fontWeight: FontWeight.w700,
     height: 1.55,
     letterSpacing: -0.2,
   );
   static const lyricIdle = TextStyle(
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: FontWeight.w500,
     height: 1.6,
   );

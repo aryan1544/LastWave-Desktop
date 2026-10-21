@@ -78,7 +78,7 @@ class _DrawerTicker extends ConsumerWidget {
 class _WaveShellState extends ConsumerState<WaveShell> {
   // Boot collapsed: the overlay rail covers content when open, so it
   // starts shut (toggle via hamburger, auto-collapses on outside tap).
-  bool _railExpanded = false;
+  bool _railExpanded = true;
   bool _queueOpen = false;
   bool _lyricsOpen = false;
   bool _equalizerOpen = false;
@@ -786,27 +786,10 @@ class _WaveShellState extends ConsumerState<WaveShell> {
                                       // Page reserves the collapsed rail
                                       // strip; the rail floats above it.
                                       Positioned.fill(
-                                        left: WaveDensity.railCollapsed,
+                                        left: collapsed ? WaveDensity.railCollapsed : WaveDensity.railExpanded,
                                         child: widget.child,
                                       ),
-                                      // Light-dismiss: tapping outside the
-                                      // expanded rail collapses it (tap is
-                                      // absorbed, content doesn't activate).
-                                      // Below the rail + panels, so those
-                                      // keep working while it is open.
-                                      if (!collapsed)
-                                        Positioned.fill(
-                                          child: ExcludeSemantics(
-                                            child: GestureDetector(
-                                              behavior: HitTestBehavior
-                                                  .translucent,
-                                              onTap: () => setState(() =>
-                                                  _railExpanded = false),
-                                              child:
-                                                  const SizedBox.expand(),
-                                            ),
-                                          ),
-                                        ),
+                                      // The persistent rail no longer blocks clicks on the page.
                                       // Overlay rail: width animates
                                       // internally; content constraints
                                       // stay constant, so nothing reflows
@@ -839,7 +822,7 @@ class _WaveShellState extends ConsumerState<WaveShell> {
                                       // Starts past the rail (which is never
                                       // dimmed) — the rail floats above.
                                       Positioned(
-                                        left: WaveDensity.railCollapsed,
+                                        left: collapsed ? WaveDensity.railCollapsed : WaveDensity.railExpanded,
                                         top: 0,
                                         bottom: 0,
                                         right: showOverlay

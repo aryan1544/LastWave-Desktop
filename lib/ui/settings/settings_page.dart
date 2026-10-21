@@ -2456,12 +2456,16 @@ class _About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _Group(
-      title: 'About LastWave',
+      title: 'About Orbit Audio',
       subtitle: 'Build and project links',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('LastWave Desktop · v1.5.0', style: WaveType.trackTitle),
+          Text('Orbit Audio · v1.5.1', style: WaveType.trackTitle),
+          const SizedBox(height: 6),
+          Text('Built by MORNING STAR', style: WaveType.label.copyWith(color: WaveColors.defaultAccent)),
+          const SizedBox(height: 4),
+          Text('Independent Orbit Audio custom build', style: WaveType.meta.copyWith(color: WaveColors.textSecondary)),
           const SizedBox(height: 10),
           Wrap(
             spacing: 8,
